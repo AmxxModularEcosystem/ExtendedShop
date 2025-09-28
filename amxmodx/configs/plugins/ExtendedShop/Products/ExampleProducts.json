@@ -1,0 +1,20 @@
+[
+    {
+        "Key": "example-1",
+        "Currency": "GameMoney",
+        "Price": 2000,
+        "Items": {
+            "Item": "Weapon",
+            "Name": "weapon_m4a1"
+        }
+    },
+    {
+        "Key": "example-2",
+        "Currency": "GameMoney",
+        "Price": 2500,
+        "Items": {
+            "Item": "Weapon",
+            "Name": "weapon_ak47"
+        }
+    }
+]
