@@ -3,6 +3,8 @@
 #endif
 #define _extended_shop_included
 
+#include <ParamsController>
+
 #define EXSHOP_PRODUCT_NAME_MAX_LEN 64
 #define EXSHOP_PRODUCT_KEY_MAX_LEN 64
 
@@ -13,6 +15,7 @@ new const EXSHOP_BUY_CMD[] = "exshop_buy";
 new const EXSHOP_MWALLET_CURRENCY_PARAM_TYPE[] = "ExShop-MWallet-Currency";
 new const EXSHOP_PRODUCT_OBJECT_PARAM_TYPE[] = "ExShop-ProductObject";
 new const EXSHOP_PRODUCT_PARAM_TYPE[] = "ExShop-Product";
+new const EXSHOP_BUY_ITEM_TYPE[] = "ExShop-Buy";
 
 enum T_ExShop_Product { Invalid_ExShop_Product = -1 }
 
@@ -23,3 +26,7 @@ enum E_ExShop_BuyResult {
 }
 
 native ExShop_Init();
+
+stock T_ExShop_Product:PCGet_ExShopProduct(const Trie:p, const key[], const T_ExShop_Product:def = 0) {
+    return PCGet_Cell(p, key, def);
+}
