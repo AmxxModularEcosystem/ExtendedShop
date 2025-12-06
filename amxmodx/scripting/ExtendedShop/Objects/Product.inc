@@ -11,6 +11,8 @@
 #include <ParamsController>
 #include <ExtendedShop>
 
+#include "ExtendedShop/Objects/Product"
+
 enum _:S_Product {
     Product_Key[EXSHOP_PRODUCT_KEY_MAX_LEN],
     Product_Name[EXSHOP_PRODUCT_NAME_MAX_LEN],
@@ -147,12 +149,18 @@ T_ExShop_Product:Product_Find(const key[], const bool:orFail = true) {
 }
 
 T_ExShop_Product:Product_Construct(productObject[S_Product]) {
+    if (productObject[Product_Key][0] == '#') {
+        set_fail_state("Product key can't start with '#'.");
+        return Invalid_ExShop_Product;
+    }
+
     if (productObject[Product_Name][0] == EOS) {
         copy(productObject[Product_Name], charsmax(productObject[Product_Name]), productObject[Product_Key]);
     }
 
     new T_ExShop_Product:product = T_ExShop_Product:ArrayPushArray(Products, productObject);
     TrieSetCell(ProductsMap, productObject[Product_Key], product);
+    TrieSetCell(ProductsMap, fmt("#%d", product), product);
 
     return product;
 }

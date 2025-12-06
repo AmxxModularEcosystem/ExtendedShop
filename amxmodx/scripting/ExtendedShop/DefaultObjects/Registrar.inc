@@ -3,6 +3,7 @@
 #include "ExtendedShop/DefaultObjects/ParamType/MWallet-Currency"
 #include "ExtendedShop/DefaultObjects/ParamType/ProductObject"
 #include "ExtendedShop/DefaultObjects/ParamType/Product"
+#include "ExtendedShop/DefaultObjects/ParamType/MenuObject"
 
 public ParamsController_OnRegisterTypes() {
     ExShop_Init();
@@ -10,6 +11,7 @@ public ParamsController_OnRegisterTypes() {
     DefaultObjects_ParamType_MWallet_Currency_Regsiter();
     DefaultObjects_ParamType_ProductObject_Regsiter();
     DefaultObjects_ParamType_Product_Regsiter();
+    DefaultObjects_ParamType_MenuObject_Regsiter();
 }
 
 

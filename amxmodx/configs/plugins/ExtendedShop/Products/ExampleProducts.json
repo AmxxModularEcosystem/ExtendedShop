@@ -1,6 +1,6 @@
 [
     {
-        "Key": "example-1",
+        "Key": "example-product-1",
         "Currency": "GameMoney",
         "Price": 2000,
         "Items": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "Key": "example-2",
+        "Key": "example-product-2",
         "Currency": "GameMoney",
         "Price": 2500,
         "Items": {

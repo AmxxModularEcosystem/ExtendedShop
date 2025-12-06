@@ -10,7 +10,7 @@ DefaultObjects_ItemType_Buy_Regsiter() {
 }
 
 @DefaultObjects_ItemType_Buy_OnGive(const playerIndex, const Trie:p) {
-    return Product_Buy(PCGet_ExShopProduct(p, "Product"), playerIndex) == ExShop_Buy_Success
+    return Product_Buy(playerIndex, PCGet_ExShopProduct(p, "Product")) == ExShop_Buy_Success
         ? IC_RET_GIVE_SUCCESS
         : IC_RET_GIVE_FAIL;
 }
