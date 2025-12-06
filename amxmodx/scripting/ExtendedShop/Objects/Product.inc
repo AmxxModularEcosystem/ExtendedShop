@@ -25,9 +25,9 @@ static Array:Products = Invalid_Array;
 static Trie:ProductsMap = Invalid_Trie;
 
 Product_Init() {
-    IC_Init();
-    MWallet_Init();
     ParamsController_Init();
+    MWallet_Init();
+    IC_Init();
 
     if (Products == Invalid_Array) {
         Products = ArrayCreate(S_Product, 1);

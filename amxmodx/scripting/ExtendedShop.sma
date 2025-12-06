@@ -23,6 +23,8 @@ PluginInit() {
         return;
     }
     inited = true;
+    
+    log_amx("[INFO] Initialize ExShop.");
 
     register_plugin(PluginName, PluginVersion, PluginAuthor);
 
@@ -34,6 +36,8 @@ PluginInit() {
 
     register_clcmd(EXSHOP_BUY_CMD, "@Cmd_Buy");
     register_clcmd(EXSHOP_MENU_CMD, "@Cmd_Menu");
+
+    log_amx("[INFO] ExShop initialized.");
 }
 
 @Cmd_Buy(const playerIndex) {
@@ -81,7 +85,6 @@ PluginInit() {
 }
 
 #include "ExtendedShop/API/Main"
-
 public plugin_natives() {
     API_Main_RegisterNatives();
 }

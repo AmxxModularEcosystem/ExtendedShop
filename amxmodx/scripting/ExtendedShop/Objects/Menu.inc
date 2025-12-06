@@ -23,9 +23,10 @@ static Array:Menus = Invalid_Array;
 static Trie:MenusMap = Invalid_Trie;
 
 Menu_Init() {
-    IC_Init();
-    MWallet_Init();
     ParamsController_Init();
+    MWallet_Init();
+    IC_Init();
+    
     Product_Init();
 
     if (Menus == Invalid_Array) {
