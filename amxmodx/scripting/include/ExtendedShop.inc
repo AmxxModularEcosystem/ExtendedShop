@@ -5,6 +5,8 @@
 
 #include <ParamsController>
 
+#define EXSHOP_VERSION "1.1.0"
+
 #define EXSHOP_PRODUCT_NAME_MAX_LEN 64
 #define EXSHOP_PRODUCT_KEY_MAX_LEN 64
 

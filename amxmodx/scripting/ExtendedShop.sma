@@ -10,7 +10,7 @@
 #include "ExtendedShop/DefaultObjects/Registrar"
 
 public stock const PluginName[] = "Extended Shop";
-public stock const PluginVersion[] = "1.0.0";
+public stock const PluginVersion[] = EXSHOP_VERSION;
 public stock const PluginAuthor[] = "ArKaNeMaN";
 
 public plugin_precache() {
