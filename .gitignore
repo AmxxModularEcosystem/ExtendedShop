@@ -1,4 +1,21 @@
+# Артефакты сборки
 *.amxx
 *.zip
-.build
+build/
+dist/
 plugins-*.ini
+
+# старый bat-билд (если был)
+.build
+
+# amxb: секреты и кэш
+.env
+.env.local
+.amxb-cache/
+
+# инструменты / редактор
+.omo/
+.codegraph/
+.vscode/
+.claude/
+node_modules/

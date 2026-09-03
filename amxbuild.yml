@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/AmxxModularEcosystem/amxx-builder/master/schema/amxbuild.schema.json
+
+name: ExtendedShop
+
+amxmodx:
+  version: "1.10.5428"   # version — всегда строка в кавычках
+
+deps:
+  # <ItemsController> — публичный API лежит в VipModular (тег rc-линии, где
+  # include доступен как amxmodx/scripting/include/ItemsController.inc)
+  - AmxxModularEcosystem/VipModular@5.0.0-rc4f2
+  - AmxxModularEcosystem/ParamsController@1.4.3
+  - AmxxModularEcosystem/ModularWallet@1.1.0
+
+output:
+  readme: true
+  generate_ini: false
